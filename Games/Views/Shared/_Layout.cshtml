@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Games</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="content-wrapper clear-fix" style="position: relative">
+                <section id="login">
+                        @Html.Partial("_LoginPartial")
+                </section>
+                <div class="float-left">
+                    <a title="Home" href="/">
+                        @if (string.IsNullOrWhiteSpace(ViewBag.Game))
+                        {
+                            <img alt="Lego IronMan" src="~/Images/legoIronMan.png" />  
+                        }
+                        else
+                        {
+                            <img alt="@ViewBag.Game" src="~/Images/@(ViewBag.Game).png" />  
+                        }
+                        
+                    </a>   
+                                          
+                </div>
+                <div class="float-right"> 
+                    
+                    <nav>
+                        <ul id="menu">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("The Games", "", "Play")</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - Games Group</p>
+                </div>
+            </div>
+        </footer>        
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("Scripts", required: false)        
+    </body>
+</html>
