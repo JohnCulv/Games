@@ -9,13 +9,12 @@ using System.Web.Routing;
 
 namespace Games
 {
-    // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
-    // visit http://go.microsoft.com/?LinkId=9394801
-
     public class MvcApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
         {
+            MEFConfig.RegisterMEF(this, Server.MapPath(@"~\bin\"));
+            
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Games", "Games\Games.csproj", "{D175A742-DB6B-4B11-8701-1134E3F1035B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Games.Site", "Games\Games.Site.csproj", "{D175A742-DB6B-4B11-8701-1134E3F1035B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{563933FE-AA7F-4249-ABCB-EF088D7B8539}"
 	ProjectSection(SolutionItems) = preProject
@@ -9,6 +9,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{563933
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{FE995855-A226-40F1-93F1-F8A8D8DD1C29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Games.Module.Hangman", "Games\Modules\Games.Module.Hangman\Games.Module.Hangman.csproj", "{5975D559-AB8B-442E-86D1-EE531BA28517}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Games.Module.Monopoly", "Games\Modules\Games.Module.Monopoly\Games.Module.Monopoly.csproj", "{F36EC4A3-5257-418C-AB96-872F606AC97C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,8 +26,20 @@ Global
 		{D175A742-DB6B-4B11-8701-1134E3F1035B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D175A742-DB6B-4B11-8701-1134E3F1035B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D175A742-DB6B-4B11-8701-1134E3F1035B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5975D559-AB8B-442E-86D1-EE531BA28517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5975D559-AB8B-442E-86D1-EE531BA28517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5975D559-AB8B-442E-86D1-EE531BA28517}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5975D559-AB8B-442E-86D1-EE531BA28517}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F36EC4A3-5257-418C-AB96-872F606AC97C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F36EC4A3-5257-418C-AB96-872F606AC97C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F36EC4A3-5257-418C-AB96-872F606AC97C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F36EC4A3-5257-418C-AB96-872F606AC97C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5975D559-AB8B-442E-86D1-EE531BA28517} = {FE995855-A226-40F1-93F1-F8A8D8DD1C29}
+		{F36EC4A3-5257-418C-AB96-872F606AC97C} = {FE995855-A226-40F1-93F1-F8A8D8DD1C29}
 	EndGlobalSection
 EndGlobal
